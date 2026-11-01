@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Dashboard Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">🚀 DevTeam Project</div>
+        <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+                    <!-- ⚡ THE ADDITION: A simple button with a unique ID -->
+        <li><button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <!-- 2. Main Page Container -->
+    <div class="page-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Team Shortcuts</h3>
+            <ul>
+                <li>📁 Project Files</li>
+                <li>📝 Code Reviews</li>
+                <li>📊 Netlify Deploys</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <h1>Welcome to the Team Dashboard</h1>
+            <p>This layout uses CSS Grid to adapt automatically to any screen size.</p>
+
+            <!-- Responsive Dashboard Metrics Grid -->
+            <div class="dashboard-grid">
+           <!-- <div class="card card-blue">
+                    <h3>Active Users</h3>
+                    <p class="metric">1,240</p>
+                </div>
+                <div class="card card-green">
+                    <h3>Server Status</h3>
+                    <p class="metric">99.9%</p>
+                </div>
+                <div class="card card-purple">
+                    <h3>Open Pull Requests</h3>
+                    <p class="metric">4 Pending</p>
+                </div>-->
+
+                    <!-- Card 1: Active Users with an Interactive Bar Chart -->
+    <div class="card card-blue">
+        <h3>Active Users</h3>
+        <p class="metric">1,240</p>
+        
+        <!-- Pure HTML/CSS Bar Chart Container -->
+        <div class="chart-container-bar">
+            <!-- Individual bars. Data height is controlled by custom CSS variables -->
+            <div class="bar-wrapper">
+                <div class="bar" style="--bar-value: 40%;" data-value="400"></div>
+                <span class="bar-label">Mon</span>
+            </div>
+            <div class="bar-wrapper">
+                <div class="bar" style="--bar-value: 75%;" data-value="750"></div>
+                <span class="bar-label">Tue</span>
+            </div>
+            <div class="bar-wrapper">
+                <div class="bar" style="--bar-value: 95%;" data-value="1.2k"></div>
+                <span class="bar-label">Wed</span>
+            </div>
+            <div class="bar-wrapper">
+                <div class="bar" style="--bar-value: 60%;" data-value="600"></div>
+                <span class="bar-label">Thu</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2: Server Status with an Interactive Progress Ring Bar -->
+    <div class="card card-green">
+        <h3>Server Status</h3>
+        <p class="metric">99.9%</p>
+        
+        <!-- Pure HTML/CSS Progress Tracker -->
+        <div class="progress-wrapper">
+            <span class="progress-text">Uptime Target (100%)</span>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 99.9%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3: Open Pull Requests with Activity Dots -->
+    <div class="card card-purple">
+        <h3>Open Pull Requests</h3>
+        <p class="metric">4 Pending</p>
+        
+        <div class="pr-activity-wrapper">
+            <span class="progress-text">Team Weekly Merges</span>
+            <div class="dot-container">
+                <div class="activity-dot active" title="Merged Mon"></div>
+                <div class="activity-dot active" title="Merged Tue"></div>
+                <div class="activity-dot active" title="Merged Wed"></div>
+                <div class="activity-dot active" title="Merged Thu"></div>
+                <div class="activity-dot standard" title="Pending PR"></div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </main>
+    </div>
+    
+
+    <!-- Link our external JavaScript instructions here -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
